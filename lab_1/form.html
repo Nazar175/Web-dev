@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запропонувати місто</title>
+</head>
+<body>
+<header>
+    <h1>Запропонувати місто для наступного рейтингу</h1>
+    <nav aria-label="Навігація">
+        <a href="index.html">Головна</a> |
+        <a href="city-lviv.html">Львів</a> |
+        <a href="city-ivano-frankivsk.html">Івано-Франківськ</a> |
+        <a href="city-lyon.html">Ліон</a> |
+        <a href="form.html">Запропонувати місто</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Форма пропозиції</h2>
+        <p>Заповніть форму, якщо хочете запропонувати місто для наступного рейтингу.</p>
+
+        <form action="#" method="post">
+            <p>
+                <label for="name">Ваше ім'я:</label><br>
+                <input type="text" id="name" name="name" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="city">Назва міста:</label><br>
+                <input type="text" id="city" name="city" required>
+            </p>
+
+            <p>
+                <label for="country">Країна:</label><br>
+                <input type="text" id="country" name="country" required>
+            </p>
+
+            <p>
+                <label for="type">Тип пропозиції:</label><br>
+                <select id="type" name="type">
+                    <option value="city">Нове місто</option>
+                    <option value="country">Місто з моєї країни</option>
+                    <option value="europe">Місто Європи</option>
+                    <option value="world">Місто з іншої частини світу</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="reason">Чому варто відвідати це місто?</label><br>
+                <textarea id="reason" name="reason" rows="6" cols="50" required></textarea>
+            </p>
+
+            <p>
+                <label for="rating">Яку оцінку ви б дали місту?</label><br>
+                <select id="rating" name="rating">
+                    <option value="10">10/10</option>
+                    <option value="9">9/10</option>
+                    <option value="8">8/10</option>
+                    <option value="7">7/10</option>
+                    <option value="6">6/10</option>
+                </select>
+            </p>
+
+            <button type="submit">Надіслати пропозицію</button>
+            <button type="reset">Очистити форму</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Автор: Гучко Назар | Лабораторна робота №1</p>
+</footer>
+</body>
+</html>
