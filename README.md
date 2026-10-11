@@ -16,8 +16,6 @@
 
 [Переглянути сайт](https://nazar175.github.io/Web-dev/lab_3/)
 
----
+### Лабораторна робота №4
 
-## Автор
-
-[GitHub — Nazar175](https://github.com/Nazar175)
+[Переглянути сайт](https://nazar175.github.io/Web-dev/lab_4/)

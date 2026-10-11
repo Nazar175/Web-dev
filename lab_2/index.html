@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акустична варта</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Акустична варта</h1>
+        <p>Допомагаємо стежити за рівнем міського шуму</p>
+
+        <nav>
+            <a href="#about">Про нас</a>
+            <a href="#services">Наші послуги</a>
+            <a href="#measurements">Вимірювання</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Про нашу компанію</h2>
+            <p>«Акустична варта» — навчальний приклад компанії, яка вимірює рівень шуму в містах.</p>
+            <p>Ми допомагаємо житловим комплексам, офісам і громадським просторам краще розуміти шумове середовище.</p>
+        </section>
+
+        <section>
+            <h2>Поточний моніторинг</h2>
+            <article class="measurement-card">
+                <h3>Житловий квартал «Зелений двір»</h3>
+                <p><strong>Статус:</strong> у межах плану</p>
+                <p><strong>Середній рівень шуму:</strong> 54 dB(A)</p>
+                <p><strong>Період вимірювання:</strong> 24 години</p>
+                <p><strong>Кількість точок:</strong> 12</p>
+            </article>
+        </section>
+
+        <section id="services">
+            <h2>Наші послуги</h2>
+            <article class="service-card">
+                <h3>Вимірювання шуму</h3>
+                <p>Встановлюємо датчики та вимірюємо рівень шуму в різних місцях.</p>
+            </article>
+            <article class="service-card">
+                <h3>Аналіз результатів</h3>
+                <p>Порівнюємо показники та готуємо зрозумілий звіт.</p>
+            </article>
+            <article class="service-card">
+                <h3>Рекомендації</h3>
+                <p>Пояснюємо результати та пропонуємо, що можна покращити.</p>
+            </article>
+        </section>
+
+        <aside class="warning">
+            <strong>Увага!</strong>
+            Один короткий замір не завжди показує повний рівень шуму. Для точнішого результату вимірювання потрібно проводити в різний час.
+        </aside>
+
+        <section id="measurements">
+            <h2>Останні вимірювання</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Місце</th>
+                        <th>Рівень шуму</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09.10.2026</td>
+                        <td>Житловий квартал</td>
+                        <td>54 dB(A)</td>
+                        <td>У нормі</td>
+                    </tr>
+                    <tr>
+                        <td>08.10.2026</td>
+                        <td>Центральна вулиця</td>
+                        <td>61 dB(A)</td>
+                        <td>Потрібна перевірка</td>
+                    </tr>
+                    <tr>
+                        <td>07.10.2026</td>
+                        <td>Офісний центр</td>
+                        <td>48 dB(A)</td>
+                        <td>У нормі</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Замовити дослідження</h2>
+            <p>Заповніть форму, щоб описати свій об'єкт.</p>
+
+            <form action="#" method="post">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="object">Тип об'єкта:</label>
+                <select id="object" name="object" required>
+                    <option value="">Оберіть варіант</option>
+                    <option value="home">Житловий будинок</option>
+                    <option value="office">Офіс</option>
+                    <option value="street">Вулиця або площа</option>
+                    <option value="other">Інше</option>
+                </select>
+
+                <label for="description">Короткий опис:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Акустична варта</strong> | Email: info@akustychna-varta.example</p>
+        <p>© 2026</p>
+    </footer>
+</body>
+</html>
