@@ -1,0 +1,32 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.header { color: v.$color-white; background: v.$color-primary-dark; padding: v.$space-md 0; }
+.header__inner { display: flex; flex-direction: column; gap: v.$space-md; }
+.logo { color: v.$color-white; font-size: 1.35rem; font-weight: 700; text-decoration: none; }
+.nav { display: flex; flex-direction: column; gap: v.$space-sm; }
+.nav a { padding: 5px 0; color: v.$color-white; text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+.hero { padding: 48px 0; color: v.$color-white; background: #183f43; }
+.hero__inner { display: grid; grid-template-columns: 1fr; gap: v.$space-xl; align-items: center; }
+.hero__text p:not(.eyebrow) { max-width: 600px; color: #e0eeea; }
+.hero .eyebrow { color: #a5e1cc; }
+.hero__picture { min-height: 190px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #4c7774; border-radius: v.$radius; background: #205552; }
+.sound-circle { display: flex; align-items: center; justify-content: center; width: 100px; height: 100px; margin-bottom: v.$space-md; border: 2px solid #a5e1cc; border-radius: 50%; color: #a5e1cc; font-size: 3rem; }
+.hero__picture p { margin-bottom: 0; font-size: .7rem; letter-spacing: .08em; }
+.warning { display: flex; align-items: flex-start; gap: v.$space-md; margin-top: v.$space-xl; margin-bottom: v.$space-xl; padding: v.$space-lg; border: 1px solid #e6cb83; border-radius: v.$radius; background: #fff8e5; }
+.warning__mark { display: flex; flex: 0 0 32px; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; color: #76550b; background: #f5dfa1; }
+.warning h2 { margin-bottom: v.$space-sm; font-size: 1.25rem; }
+.warning p { margin-bottom: 0; }
+.request-layout { display: grid; grid-template-columns: 1fr; gap: v.$space-lg; }
+.footer { padding: v.$space-lg 0; color: v.$color-white; background: v.$color-primary-dark; }
+.footer__inner { display: flex; flex-direction: column; align-items: flex-start; gap: v.$space-md; }
+.footer p { margin: 4px 0 0; color: #d8e7e3; font-size: .9rem; }
+
+@include m.respond-to(v.$bp-tablet) {
+  .header__inner { @include m.flex-row; }
+  .nav { flex-direction: row; flex-wrap: wrap; gap: v.$space-md; }
+  .hero__inner { grid-template-columns: 1.1fr .9fr; }
+  .request-layout { grid-template-columns: 1fr 1.3fr; }
+  .footer__inner { flex-direction: row; align-items: center; justify-content: space-between; }
+}

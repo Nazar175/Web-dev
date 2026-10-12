@@ -1,11 +1,7 @@
-/* Базові стилі для лабораторної роботи №2 */
-
-/* Універсальний селектор */
 * {
     box-sizing: border-box;
 }
 
-/* Селектор елемента */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,12 +10,10 @@ body {
     line-height: 1.5;
 }
 
-/* Групування селекторів */
 h1, h2, h3 {
     color: #145b5b;
 }
 
-/* Header та навігація */
 header {
     padding: 25px;
     text-align: center;
@@ -50,7 +44,6 @@ nav a:hover {
     background: #267979;
 }
 
-/* Основні секції */
 main {
     width: 90%;
     max-width: 900px;
@@ -69,7 +62,6 @@ h2 {
     margin-top: 0;
 }
 
-/* Селектор класу */
 .measurement-card, .service-card {
     display: inline-block;
     vertical-align: top;
@@ -82,17 +74,14 @@ h2 {
     background: #f8fbfa;
 }
 
-/* Селектор ID */
 #about {
     border-top: 4px solid #238080;
 }
 
-/* Селектор атрибута */
 input[type="email"] {
     border-left: 4px solid #238080;
 }
 
-/* Приклад конфлікту каскаду та specificity */
 .note {
     color: #6c7777;
     font-size: 13px;
@@ -102,7 +91,6 @@ input[type="email"] {
     color: #145b5b;
 }
 
-/* Попередження: relative + абсолютна позначка */
 .warning {
     position: relative;
     margin-bottom: 25px;
@@ -121,7 +109,6 @@ input[type="email"] {
     color: #9b6b00;
 }
 
-/* Таблиця */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -181,20 +168,4 @@ footer {
 
 footer p {
     margin: 5px;
-}
-
-@media (max-width: 650px) {
-    .measurement-card, .service-card {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    table {
-        font-size: 13px;
-    }
-
-    th, td {
-        padding: 6px;
-    }
 }

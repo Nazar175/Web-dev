@@ -1,0 +1,18 @@
+@use 'variables' as v;
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: v.$color-text; background: v.$color-white; font-family: Arial, sans-serif; line-height: 1.6; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { line-height: 1.2; }
+h1 { font-size: clamp(2rem, 6vw, 3.4rem); }
+h2 { margin-bottom: v.$space-md; font-size: clamp(1.6rem, 4vw, 2.2rem); }
+.container { width: min(100% - 32px, v.$container-max); margin-inline: auto; }
+.eyebrow { margin-bottom: v.$space-sm; color: v.$color-primary; font-size: .75rem; font-weight: 700; letter-spacing: .1em; }
+.section { padding: 48px 0; }
+.section--light { background: v.$color-surface; }
+.section__intro { color: v.$color-muted; }
+.note { margin: v.$space-md 0 0; color: v.$color-muted; font-size: .85rem; }
+.green { color: v.$color-success; }
