@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Акустична варта — моніторинг шуму в міському середовищі.">
+  <title>Акустична варта</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#home">Акустична варта</a>
+      <nav class="nav" aria-label="Основна навігація">
+        <a href="#monitoring">Моніторинг</a>
+        <a href="#services">Послуги</a>
+        <a href="#measurements">Вимірювання</a>
+        <a href="#request">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">КОМФОРТНЕ МІСЬКЕ СЕРЕДОВИЩЕ</p>
+          <h1>Слухаємо місто,<br>щоб зробити його тихішим</h1>
+          <p>Ми вимірюємо рівень шуму та допомагаємо зрозуміти, як зробити житлові й робочі простори комфортнішими.</p>
+          <a class="button" href="#request">Замовити дослідження</a>
+        </div>
+        <div class="hero__picture" aria-hidden="true"><div class="sound-circle">◉</div><p>ВИМІРЮЄМО · АНАЛІЗУЄМО · ПОЯСНЮЄМО</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="monitoring">
+      <div class="container">
+        <p class="eyebrow">ПОТОЧНА СИТУАЦІЯ</p>
+        <h2>Моніторинг шуму</h2>
+        <p class="section__intro">Приклад показників, які можна отримати під час дослідження.</p>
+        <div class="monitoring-grid">
+          <article class="info-card"><span class="info-card__label">Об'єкт</span><strong>Зелений двір</strong><p>Житловий квартал</p></article>
+          <article class="info-card"><span class="info-card__label">Середній шум</span><strong>54 dB(A)</strong><p>За останню добу</p></article>
+          <article class="info-card"><span class="info-card__label">Період</span><strong>24 години</strong><p>Безперервний нагляд</p></article>
+          <article class="info-card"><span class="info-card__label">Датчики</span><strong>12 точок</strong><p>На території об'єкта</p></article>
+          <article class="info-card"><span class="info-card__label">Статус</span><strong class="green">У нормі</strong><p>Дані для прикладу</p></article>
+        </div>
+        <div class="sensor-dashboard" aria-labelledby="sensor-dashboard-title">
+          <div class="sensor-dashboard__heading">
+            <div>
+              <h3 id="sensor-dashboard-title">Датчики системи</h3>
+              <p class="section__intro">Натисніть кнопку на картці, щоб додати тестове вимірювання.</p>
+            </div>
+          </div>
+          <div id="sensor-stats" class="sensor-stats" aria-live="polite"></div>
+          <p id="critical-summary" class="critical-summary" aria-live="polite"></p>
+          <div class="sensor-controls">
+            <div>
+              <label for="sensor-search">Пошук датчика</label>
+              <input id="sensor-search" type="search" placeholder="ID, район або адреса">
+            </div>
+            <div>
+              <label for="district-filter">Фільтр за районом</label>
+              <select id="district-filter">
+                <option value="">Усі райони</option>
+              </select>
+            </div>
+          </div>
+          <div id="sensor-list" class="sensor-list" aria-live="polite"></div>
+          <p class="note">Пороги: до 55 dB включно — норма; понад 55 до 70 dB включно — попередження; понад 70 dB — критичний рівень.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="services">
+      <div class="container">
+        <p class="eyebrow">НАШІ ПОСЛУГИ</p>
+        <h2>Чим ми можемо допомогти</h2>
+        <div class="services-grid">
+          <article class="service-card"><span>01</span><h3>Вимірювання шуму</h3><p>Встановлюємо датчики та збираємо дані у вибраній локації.</p></article>
+          <article class="service-card"><span>02</span><h3>Аналіз результатів</h3><p>Порівнюємо показники за місцем і часом проведення вимірювань.</p></article>
+          <article class="service-card"><span>03</span><h3>Звіт для клієнта</h3><p>Готуємо зрозумілу таблицю з основними результатами.</p></article>
+          <article class="service-card"><span>04</span><h3>Рекомендації</h3><p>Пропонуємо наступні кроки для покращення акустичного комфорту.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container warning">
+      <strong class="warning__mark">!</strong>
+      <div><h2>Важливо враховувати контекст</h2><p>Окреме вимірювання не завжди показує повну картину. Для висновків важливі місце, час доби та тривалість шуму.</p></div>
+    </section>
+
+    <section class="section" id="measurements">
+      <div class="container">
+        <p class="eyebrow">ПРИКЛАД ЗВІТУ</p>
+        <h2>Останні вимірювання</h2>
+        <div class="table-wrapper"><table>
+          <thead><tr><th>Дата</th><th>Місце</th><th>Рівень</th><th>Статус</th></tr></thead>
+          <tbody>
+            <tr><td>09.10.2026</td><td>Зелений двір</td><td>54 dB(A)</td><td class="green">У нормі</td></tr>
+            <tr><td>08.10.2026</td><td>Вулиця Центральна</td><td>61 dB(A)</td><td>Потрібна увага</td></tr>
+            <tr><td>07.10.2026</td><td>Офісний центр</td><td>48 dB(A)</td><td class="green">У нормі</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="request">
+      <div class="container request-layout">
+        <div><p class="eyebrow">ЗВ'ЯЖІТЬСЯ З НАМИ</p><h2>Замовити дослідження</h2><p>Заповніть коротку форму, щоб описати свій об'єкт і потребу.</p><p><strong>Email:</strong> info@akustychna-varta.example</p></div>
+        <form class="request-form" action="#" method="post">
+          <div class="form-fields">
+            <div><label for="name">Ваше ім'я</label><input id="name" name="name" type="text" placeholder="Ім'я" required></div>
+            <div><label for="email">Електронна пошта</label><input id="email" name="email" type="email" placeholder="name@example.com" required></div>
+            <div><label for="object">Тип об'єкта</label><select id="object" name="object" required><option value="">Оберіть варіант</option><option>Житловий будинок</option><option>Офіс</option><option>Підприємство</option><option>Громадський простір</option></select></div>
+            <div><label for="period">Період вимірювання</label><select id="period" name="period"><option>1 доба</option><option>7 днів</option><option>Потрібна консультація</option></select></div>
+          </div>
+          <div class="form-description"><label for="message">Короткий опис</label><textarea id="message" name="message" rows="4" placeholder="Опишіть вашу задачу"></textarea></div>
+          <button class="button" type="submit">Надіслати запит</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer__inner"><div><strong>Акустична варта</strong><p>Моніторинг шумового середовища</p></div><p>info@akustychna-varta.example</p><p>© 2026</p></div></footer>
+</body>
+</html>
