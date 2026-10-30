@@ -1,0 +1,37 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.button { display: inline-block; margin-top: v.$space-md; padding: 11px 18px; border: 0; border-radius: v.$radius; color: v.$color-white; background: v.$color-primary; font-weight: 700; text-decoration: none; cursor: pointer; transition: background .2s, transform .2s; }
+.button:hover { background: v.$color-primary-dark; transform: translateY(-2px); }
+.monitoring-grid, .services-grid { display: grid; grid-template-columns: 1fr; gap: v.$space-md; margin-top: v.$space-lg; }
+.info-card, .service-card { min-width: 0; padding: v.$space-lg; border: 1px solid v.$color-border; border-radius: v.$radius; background: v.$color-white; }
+.info-card { display: flex; flex-direction: column; gap: 5px; }
+.info-card__label { color: v.$color-muted; font-size: .85rem; }
+.info-card strong { font-size: 1.25rem; }
+.info-card p { margin-bottom: 0; color: v.$color-muted; font-size: .9rem; }
+.service-card { transition: box-shadow .2s, transform .2s; }
+.service-card:hover { box-shadow: 0 6px 18px rgb(0 0 0 / 8%); transform: translateY(-3px); }
+.service-card span { color: v.$color-primary; font-size: .8rem; font-weight: 700; }
+.service-card h3 { margin: v.$space-md 0 v.$space-sm; }
+.service-card p { margin-bottom: 0; color: v.$color-muted; }
+.table-wrapper { width: 100%; overflow-x: auto; border: 1px solid v.$color-border; border-radius: v.$radius; }
+table { width: 100%; min-width: 600px; border-collapse: collapse; background: v.$color-white; text-align: left; }
+th, td { padding: 12px 14px; border-bottom: 1px solid v.$color-border; }
+th { background: v.$color-surface; font-size: .85rem; }
+tbody tr:last-child td { border-bottom: 0; }
+.request-form { padding: v.$space-lg; border: 1px solid v.$color-border; border-radius: v.$radius; background: v.$color-white; }
+.form-fields { display: grid; grid-template-columns: 1fr; gap: v.$space-md; }
+label { display: block; margin-bottom: 6px; font-size: .9rem; font-weight: 700; }
+input, select, textarea { display: block; width: 100%; max-width: 100%; padding: 10px; border: 1px solid #c7d5d0; border-radius: 6px; background: white; }
+.form-description { margin-top: v.$space-md; }
+textarea { resize: vertical; }
+.request-form .button { width: 100%; }
+
+@include m.respond-to(v.$bp-tablet) {
+  .monitoring-grid, .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@include m.respond-to(v.$bp-desktop) {
+  .monitoring-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .services-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
