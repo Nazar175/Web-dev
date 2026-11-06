@@ -38,4 +38,4 @@
 
 ### Лабараторна робота №9
 
-[Переглянути сайт](https://nazar175.github.io/Web-dev/lab_9/)
+[Переглянути сайт](https://nazar175.github.io/Web-dev/lab_9/src/)
