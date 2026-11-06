@@ -1,0 +1,29 @@
+<main class="container">
+  <h1>Акустична варта</h1>
+  <p class="subtitle">Список датчиків міського шуму</p>
+
+  <section class="sensor-form">
+    <h2>Додати датчик</h2>
+    <input type="text" placeholder="Назва датчика" [(ngModel)]="newName">
+    <input type="text" placeholder="Район" [(ngModel)]="newDistrict">
+    <input type="number" min="0" placeholder="Рівень шуму, дБ" [(ngModel)]="newNoiseLevel">
+    <button type="button" (click)="addSensor()">Додати датчик</button>
+  </section>
+
+  <section class="sensor-list">
+    @for (sensor of sensors; track sensor.id) {
+      <article class="sensor-card" [class.inactive]="sensor.status === 'inactive'">
+        <h3>{{ sensor.name }}</h3>
+        <p>Район: {{ sensor.district }}</p>
+        <p>Рівень шуму: {{ sensor.noiseLevel }} дБ</p>
+        <p>Статус: <strong>{{ sensor.status }}</strong></p>
+        <div class="actions">
+          <button type="button" (click)="toggleStatus(sensor.id)">Змінити статус</button>
+          <button type="button" class="delete-button" (click)="deleteSensor(sensor.id)">Видалити</button>
+        </div>
+      </article>
+    } @empty {
+      <p>Датчиків поки немає.</p>
+    }
+  </section>
+</main>

@@ -1,0 +1,15 @@
+:host { display: block; font-family: Arial, sans-serif; color: #1f2937; }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px 40px; }
+h1 { margin-bottom: 6px; }
+.subtitle { margin-top: 0; color: #667085; }
+.sensor-form { display: grid; gap: 10px; padding: 20px; margin: 24px 0; border: 1px solid #d0d5dd; border-radius: 10px; background: white; }
+.sensor-form h2 { margin: 0 0 6px; }
+.sensor-form input { width: 100%; padding: 10px 12px; border: 1px solid #b8c0cc; border-radius: 6px; font-size: 16px; }
+button { padding: 9px 14px; border: 0; border-radius: 6px; cursor: pointer; background: #1769aa; color: white; }
+button:hover { opacity: .9; }
+.sensor-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.sensor-card { padding: 18px; border: 1px solid #d0d5dd; border-radius: 10px; background: white; }
+.sensor-card h3 { margin-top: 0; }
+.sensor-card.inactive { opacity: .55; background: #f2f4f7; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.delete-button { background: #b42318; }
